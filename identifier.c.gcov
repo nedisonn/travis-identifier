@@ -1,0 +1,89 @@
+        -:    0:Source:identifier.c
+        -:    0:Graph:identifier.gcno
+        -:    0:Data:identifier.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:// ----------------------------------------------------------------
+        -:    2:// ESPECIFICAÇÃO: O programa deve determinar se um identificador
+        -:    3:// é ou não válido. Um identificador válido deve começar com uma
+        -:    4:// letra e conter apenas letras ou dígitos. Além disto, deve ter
+        -:    5:// no mínimo 1 caractere e no máximo 6 caracteres de comprimento
+        -:    6:// ----------------------------------------------------------------
+        -:    7:#include <stdio.h>
+        -:    8:
+function valid_s called 2 returned 100% blocks executed 62%
+        2:    9:int valid_s(char ch) {
+        2:   10:  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
+branch  0 taken 0%
+branch  1 taken 100%
+branch  2 never executed
+branch  3 never executed
+branch  4 taken 0%
+branch  5 taken 100%
+branch  6 never executed
+branch  7 never executed
+    #####:   11:    return 1;
+        -:   12:  else
+        2:   13:    return 0;
+        2:   14:}
+        -:   15:
+function valid_f called 0 returned 0% blocks executed 0%
+    #####:   16:int valid_f(char ch) {
+    #####:   17:  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= '0') && (ch <= '9')))
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   18:    return 1;
+        -:   19:  else
+    #####:   20:    return 0;
+    #####:   21:}
+        -:   22:
+function main called 2 returned 100% blocks executed 50%
+        2:   23:int main(void) {
+        -:   24:  char achar;
+        -:   25:  int  length, valid_id;
+        2:   26:  length = 0;
+        2:   27:  printf("Identificador: ");
+        2:   28:  achar = fgetc(stdin);
+        2:   29:  valid_id = valid_s(achar);
+        2:   30:  if(valid_id) {
+branch  0 taken 0%
+branch  1 taken 100%
+    #####:   31:    length = 1;
+    #####:   32:  }
+        2:   33:  achar = fgetc(stdin);
+        2:   34:  while(achar != '\n') {
+branch  0 taken 0%
+branch  1 taken 100%
+    #####:   35:    if(!(valid_f(achar))) {
+branch  0 never executed
+branch  1 never executed
+    #####:   36:      valid_id = 0;
+    #####:   37:    }
+    #####:   38:    length++;
+    #####:   39:    achar = fgetc(stdin);
+        -:   40:  }
+        2:   41:  if (valid_id && (length >= 1) && (length < 6)) {
+branch  0 taken 0%
+branch  1 taken 100%
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   42:    printf("Valido\n");
+    #####:   43:    return 0;
+        -:   44:  }
+        -:   45:  else {
+        2:   46:    printf("Invalido\n");
+        2:   47:    return 1;
+        -:   48:  }
+        2:   49:}
