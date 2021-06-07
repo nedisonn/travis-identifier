@@ -5,6 +5,7 @@
 // no mínimo 1 caractere e no máximo 6 caracteres de comprimento
 // ----------------------------------------------------------------
 #include <stdio.h>
+#include "identifier.h" 
 
 int valid_s(char ch) {
   if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
