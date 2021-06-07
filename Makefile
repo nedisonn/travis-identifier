@@ -60,7 +60,7 @@ SYMBOLS=
 all: clean identifier compile run
 
 compile:
-	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1) -v
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 
 run:
 	- ./$(TARGET1)
@@ -74,6 +74,7 @@ identifier: identifier.c
 
 cov: identifier.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -fprofile-arcs -ftest-coverage -o $(TARGET1)
 
 test/test_runners/identifier_test_Runner.c: test/identifier_test.c
 	ruby $(UNITY_ROOT)/auto/generate_test_runner.rb test/identifier_test.c  test/test_runners/identifier_test_Runner.c

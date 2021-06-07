@@ -1,0 +1,281 @@
+        -:    0:Source:test/identifier_test.c
+        -:    0:Graph:identifier_test.gcno
+        -:    0:Data:identifier_test.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:#include <stdlib.h>
+        -:    3:#include "unity.h"
+        -:    4:#include "../identifier_without_main.h" 
+        -:    5:#define DOING_UNIT_TESTS
+function TEST_SETUP called 0 returned 0% blocks executed 0%
+    #####:    6:TEST_SETUP(Sort)
+        -:    7:{
+    #####:    8:}
+function TEST_TEAR_DOWN called 0 returned 0% blocks executed 0%
+    #####:    9:TEST_TEAR_DOWN(Sort)
+        -:   10:{
+    #####:   11:}
+        -:   12:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_1 called 1 returned 100% blocks executed 100%
+        1:   13:void TestandoValidacaoParaCharDeAOuaAteZOuz_1(void)
+        -:   14:{
+        1:   15:    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('A'), "SUCCESS");
+        1:   16:}
+        -:   17:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_2 called 1 returned 100% blocks executed 100%
+        1:   18:void TestandoValidacaoParaCharDeAOuaAteZOuz_2(void)
+        -:   19:{
+        1:   20:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('Z'), "SUCCESS");
+        1:   21:}
+        -:   22:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_3 called 1 returned 100% blocks executed 100%
+        1:   23:void TestandoValidacaoParaCharDeAOuaAteZOuz_3(void)
+        -:   24:{
+        1:   25:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('D'), "SUCCESS");
+        1:   26:}
+        -:   27:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_4 called 1 returned 100% blocks executed 100%
+        1:   28:void TestandoValidacaoParaCharDeAOuaAteZOuz_4(void)
+        -:   29:{
+        1:   30:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('G'), "SUCCESS");
+        1:   31:}
+        -:   32:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_5 called 1 returned 100% blocks executed 100%
+        1:   33:void TestandoValidacaoParaCharDeAOuaAteZOuz_5(void)
+        -:   34:{
+        1:   35:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('Y'), "SUCCESS");
+        1:   36:}
+        -:   37:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_6 called 1 returned 100% blocks executed 100%
+        1:   38:void TestandoValidacaoParaCharDeAOuaAteZOuz_6(void)
+        -:   39:{
+        1:   40:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('W'), "SUCCESS");
+        1:   41:}
+        -:   42:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_7 called 1 returned 100% blocks executed 100%
+        1:   43:void TestandoValidacaoParaCharDeAOuaAteZOuz_7(void)
+        -:   44:{
+        1:   45:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('a'), "SUCCESS");
+        1:   46:}
+        -:   47:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_8 called 1 returned 100% blocks executed 100%
+        1:   48:void TestandoValidacaoParaCharDeAOuaAteZOuz_8(void)
+        -:   49:{
+        1:   50:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('z'), "SUCCESS");
+        1:   51:}
+        -:   52:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_9 called 1 returned 100% blocks executed 100%
+        1:   53:void TestandoValidacaoParaCharDeAOuaAteZOuz_9(void)
+        -:   54:{
+        1:   55:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('d'), "SUCCESS");
+        1:   56:}
+        -:   57:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_10 called 1 returned 100% blocks executed 100%
+        1:   58:void TestandoValidacaoParaCharDeAOuaAteZOuz_10(void)
+        -:   59:{
+        1:   60:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('g'), "SUCCESS");
+        1:   61:}
+        -:   62:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_11 called 1 returned 100% blocks executed 100%
+        1:   63:void TestandoValidacaoParaCharDeAOuaAteZOuz_11(void)
+        -:   64:{
+        1:   65:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('y'), "SUCCESS");
+        1:   66:}
+        -:   67:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_12 called 1 returned 100% blocks executed 100%
+        1:   68:void TestandoValidacaoParaCharDeAOuaAteZOuz_12(void)
+        -:   69:{
+        1:   70:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_s('w'), "SUCCESS");
+        1:   71:}
+        -:   72:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_NumericError called 1 returned 100% blocks executed 100%
+        1:   73:void TestandoValidacaoParaCharDeAOuaAteZOuz_NumericError(void)
+        -:   74:{
+        1:   75:    TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s('1'), "It is supposed to be a letter and not a number");
+        1:   76:}
+        -:   77:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_WordError called 1 returned 100% blocks executed 100%
+        1:   78:void TestandoValidacaoParaCharDeAOuaAteZOuz_WordError(void)
+        -:   79:{
+        1:   80:    TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s("Ferias"), "It is supposed to be a letter and not a word");
+        1:   81:}
+        -:   82:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_WordError2 called 1 returned 100% blocks executed 100%
+        1:   83:void TestandoValidacaoParaCharDeAOuaAteZOuz_WordError2(void)
+        -:   84:{
+        1:   85:    TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s("feriado"), "It is supposed to be a letter and not a word");
+        1:   86:}
+        -:   87:
+function TestandoValidacaoParaCharDeAOuaAteZOuz_FloatNumericError called 1 returned 100% blocks executed 100%
+        1:   88:void TestandoValidacaoParaCharDeAOuaAteZOuz_FloatNumericError(void)
+        -:   89:{
+        1:   90:    TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s("8.5"), "It is supposed to be a letter and not a float number");
+        1:   91:}
+        -:   92:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_1 called 1 returned 100% blocks executed 100%
+        1:   93:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_1(void)
+        -:   94:{
+        1:   95:    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('A'), "SUCCESS");
+        1:   96:}
+        -:   97:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_2 called 1 returned 100% blocks executed 100%
+        1:   98:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_2(void)
+        -:   99:{
+        1:  100:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('Z'), "SUCCESS");
+        1:  101:}
+        -:  102:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_3 called 1 returned 100% blocks executed 100%
+        1:  103:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_3(void)
+        -:  104:{
+        1:  105:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('D'), "SUCCESS");
+        1:  106:}
+        -:  107:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_4 called 1 returned 100% blocks executed 100%
+        1:  108:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_4(void)
+        -:  109:{
+        1:  110:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('G'), "SUCCESS");
+        1:  111:}
+        -:  112:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_5 called 1 returned 100% blocks executed 100%
+        1:  113:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_5(void)
+        -:  114:{
+        1:  115:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('Y'), "SUCCESS");
+        1:  116:}
+        -:  117:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_6 called 1 returned 100% blocks executed 100%
+        1:  118:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_6(void)
+        -:  119:{
+        1:  120:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('W'), "SUCCESS");
+        1:  121:}
+        -:  122:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_7 called 1 returned 100% blocks executed 100%
+        1:  123:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_7(void)
+        -:  124:{
+        1:  125:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('a'), "SUCCESS");
+        1:  126:}
+        -:  127:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_8 called 1 returned 100% blocks executed 100%
+        1:  128:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_8(void)
+        -:  129:{
+        1:  130:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('z'), "SUCCESS");
+        1:  131:}
+        -:  132:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_9 called 1 returned 100% blocks executed 100%
+        1:  133:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_9(void)
+        -:  134:{
+        1:  135:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('d'), "SUCCESS");
+        1:  136:}
+        -:  137:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_10 called 1 returned 100% blocks executed 100%
+        1:  138:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_10(void)
+        -:  139:{
+        1:  140:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('g'), "SUCCESS");
+        1:  141:}
+        -:  142:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_11 called 1 returned 100% blocks executed 100%
+        1:  143:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_11(void)
+        -:  144:{
+        1:  145:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('y'), "SUCCESS");
+        1:  146:}
+        -:  147:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_12 called 1 returned 100% blocks executed 100%
+        1:  148:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_12(void)
+        -:  149:{
+        1:  150:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('w'), "SUCCESS");
+        1:  151:}
+        -:  152:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_13 called 1 returned 100% blocks executed 100%
+        1:  153:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_13(void)
+        -:  154:{
+        1:  155:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('0'), "SUCCESS");
+        1:  156:}
+        -:  157:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_14 called 1 returned 100% blocks executed 100%
+        1:  158:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_14(void)
+        -:  159:{
+        1:  160:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('9'), "SUCCESS");
+        1:  161:}
+        -:  162:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_15 called 1 returned 100% blocks executed 100%
+        1:  163:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_15(void)
+        -:  164:{
+        1:  165:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('5'), "SUCCESS");
+        1:  166:}
+        -:  167:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_16 called 1 returned 100% blocks executed 100%
+        1:  168:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_16(void)
+        -:  169:{
+        1:  170:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('8'), "SUCCESS");
+        1:  171:}
+        -:  172:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_17 called 1 returned 100% blocks executed 100%
+        1:  173:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_17(void)
+        -:  174:{
+        1:  175:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('2'), "SUCCESS");
+        1:  176:}
+        -:  177:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_18 called 1 returned 100% blocks executed 100%
+        1:  178:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_18(void)
+        -:  179:{
+        1:  180:        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('7'), "SUCCESS");
+        1:  181:}
+        -:  182:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_WordError called 1 returned 100% blocks executed 100%
+        1:  183:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_WordError(void)
+        -:  184:{
+        1:  185:    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f("Abobora"), "It is supposed to be a letter or one number and not a word");
+        1:  186:}
+        -:  187:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_WordError2 called 1 returned 100% blocks executed 100%
+        1:  188:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_WordError2(void)
+        -:  189:{
+        1:  190:    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f("Orelha"), "It is supposed to be a letter or one number and not a word");
+        1:  191:}
+        -:  192:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_FloatNumberError called 1 returned 100% blocks executed 100%
+        1:  193:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_FloatNumberError(void)
+        -:  194:{
+        1:  195:    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f("15.2"), "It is supposed to be a letter or one number and not a float number");
+        1:  196:}
+        -:  197:
+function TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_NumberError called 1 returned 100% blocks executed 100%
+        1:  198:void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_NumberError(void)
+        -:  199:{
+        1:  200:    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('15'), "It is supposed to be a letter or one number and not a two digit number");
+        1:  201:}
+        -:  202:
+function TestandoMain_ComecandoComNumero called 1 returned 100% blocks executed 100%
+        1:  203:void TestandoMain_ComecandoComNumero(void){
+        -:  204:    int aux;
+        1:  205:    aux = system("echo '123oi' | ./identifier");
+        1:  206:    TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to start with a letter");
+        1:  207:}
+        -:  208:
+function TestandoMain_ComecandoComLetraSucesso called 1 returned 100% blocks executed 100%
+        1:  209:void TestandoMain_ComecandoComLetraSucesso(void){
+        -:  210:    int aux;
+        1:  211:    aux = system("echo 'oi123' | ./identifier");
+        1:  212:    TEST_ASSERT_EQUAL_INT_MESSAGE(0, aux, "It is supposed to  be valid");
+        1:  213:}
+        -:  214:
+function TestandoMain_ComecandoComLetraApenasLetrasSucesso called 1 returned 100% blocks executed 100%
+        1:  215:void TestandoMain_ComecandoComLetraApenasLetrasSucesso(void){
+        -:  216:    int aux;
+        1:  217:    aux = system("echo 'Yasmi' | ./identifier");
+        1:  218:    TEST_ASSERT_EQUAL_INT_MESSAGE(0, aux, "It is supposed to be valid");
+        1:  219:}
+        -:  220:
+function TestandoMain_ComecandoComLetraComNumerosInvalido called 1 returned 100% blocks executed 100%
+        1:  221:void TestandoMain_ComecandoComLetraComNumerosInvalido(void){
+        -:  222:    int aux;
+        1:  223:    aux = system("echo 'oi12345' | ./identifier");
+        1:  224:    TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to have less than or equal to 6 letters and/or numbers");
+        1:  225:}
+        -:  226:
+function TestandoMain_ComecandoComLetraApenasLetrasInvalido called 1 returned 100% blocks executed 100%
+        1:  227:void TestandoMain_ComecandoComLetraApenasLetrasInvalido(void){
+        -:  228:    int aux;
+        1:  229:    aux = system("echo 'Nedison' | ./identifier");
+        1:  230:    TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to have less than or equal to 6 letters and/or numbers");
+        1:  231:}
