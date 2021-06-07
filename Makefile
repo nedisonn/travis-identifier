@@ -51,7 +51,7 @@ TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
   $(UNITY_ROOT)/src/unity.c \
   $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
-  identifier.c \
+  identifier_without_main.c \
   test/identifier_test.c \
   test/test_runners/identifier_test_Runner.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src 
@@ -60,16 +60,14 @@ SYMBOLS=
 all: clean identifier compile run
 
 compile:
-	$(SRC_FILES1)
-	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
-	- ./$(TARGET1)
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1) -v
 
 run:
 	- ./$(TARGET1)
 
 clean:
-	$(CLEANUP) $(TARGET1) $(TARGET2)
-	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
+	$(CLEANUP) $(TARGET1)
+	sudo rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
 
 identifier: identifier.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
