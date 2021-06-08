@@ -90,6 +90,16 @@ void TestandoValidacaoParaCharDeAOuaAteZOuz_FloatNumericError(void)
     TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s("8.5"), "It is supposed to be a letter and not a float number");
 }
 
+void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuz_Empty(void)
+{
+        TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s(''), "It is supposed to have a letter or one number and it is in blanck");
+}
+
+void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuz_Espaco(void)
+{
+        TEST_ASSERT_EQUAL_INT_MESSAGE(0, valid_s(' '), "It is supposed to have a letter or one number and it is in space");
+}
+
 void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_1(void)
 {
     TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('A'), "SUCCESS");
@@ -180,6 +190,16 @@ void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_18(void)
         TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f('7'), "SUCCESS");
 }
 
+void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_Empty(void)
+{
+        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f(''), "It is supposed to have a letter or one number and it is in blanck");
+}
+
+void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_Espaco(void)
+{
+        TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f(' '), "It is supposed to have a letter or one number and it is in space");
+}
+
 void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_WordError(void)
 {
     TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f("Abobora"), "It is supposed to be a letter or one number and not a word");
@@ -192,7 +212,7 @@ void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_WordError2(void)
 
 void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_FloatNumberError(void)
 {
-    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f("15.2"), "It is supposed to be a letter or one number and not a float number");
+    TEST_ASSERT_EQUAL_INT_MESSAGE(1, valid_f("5.2"), "It is supposed to be a letter or one number and not a float number");
 }
 
 void TestandoValidacaoParaCharAndInteirosDeAOuaAteZOuzEDe0ate9_NumberError(void)
@@ -206,6 +226,24 @@ void TestandoMain_ComecandoComNumero(void){
     TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to start with a letter");
 }
 
+void TestandoMain_Empty(void){
+    int aux;
+    aux = system("echo '' | ./identifier");
+    TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to start with a letter");
+}
+
+void TestandoMain_Espaco(void){
+    int aux;
+    aux = system("echo ' ' | ./identifier");
+    TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to start with a letter");
+}
+
+void TestandoMain_ContendoCaracterEspecial(void){
+    int aux;
+    aux = system("echo 'oi_12' | ./identifier");
+    TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to start with a letter");
+}
+
 void TestandoMain_ComecandoComLetraSucesso(void){
     int aux;
     aux = system("echo 'oi123' | ./identifier");
@@ -214,13 +252,13 @@ void TestandoMain_ComecandoComLetraSucesso(void){
 
 void TestandoMain_ComecandoComLetraApenasLetrasSucesso(void){
     int aux;
-    aux = system("echo 'Yasmi' | ./identifier");
+    aux = system("echo 'Yaya' | ./identifier");
     TEST_ASSERT_EQUAL_INT_MESSAGE(0, aux, "It is supposed to be valid");
 }
 
 void TestandoMain_ComecandoComLetraComNumerosInvalido(void){
     int aux;
-    aux = system("echo 'oi12345' | ./identifier");
+    aux = system("echo 'oi1234' | ./identifier");
     TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to have less than or equal to 6 letters and/or numbers");
 }
 
