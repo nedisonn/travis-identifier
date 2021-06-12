@@ -225,7 +225,6 @@ void TestandoMain_ComecandoComNumero(void){
     aux = system("echo '123oi' | ./identifier");
     TEST_ASSERT_EQUAL_INT_MESSAGE(256, aux, "It is supposed to start with a letter");
 }
-
 void TestandoMain_Empty(void){
     int aux;
     aux = system("echo '' | ./identifier");

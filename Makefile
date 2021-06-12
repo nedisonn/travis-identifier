@@ -73,9 +73,16 @@ identifier: identifier.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
 
 cov: identifier.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o cov identifier.c
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -fprofile-arcs -ftest-coverage -o $(TARGET1)
-
+	echo 'oi123' | ./cov | echo "saida"
+	echo 'Yaya' | ./cov | echo "saida"
+	echo '123oi' | ./cov | echo "saida"
+	echo ' ' | ./cov | echo "saida"
+	echo 'oi_12' | ./cov | echo "saida"
+	echo 'oi1234' | ./cov | echo "saida" 
+	echo 'Nedison' | ./cov | echo "saida"
+	gcov -b identifier.gnco
 test/test_runners/identifier_test_Runner.c: test/identifier_test.c
 	ruby $(UNITY_ROOT)/auto/generate_test_runner.rb test/identifier_test.c  test/test_runners/identifier_test_Runner.c
 

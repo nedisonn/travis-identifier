@@ -8,6 +8,7 @@ before_install:
   - sudo apt-get -y install valgrind cppcheck
 addons:
   apt:
+    update: true
     sources:
       - ubuntu-toolchain-r-test
     packages:
